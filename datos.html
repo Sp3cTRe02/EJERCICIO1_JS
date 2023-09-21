@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos Usuario</title>
+</head>
+<body>
+<h2>Usuario</h2>
+<form id="registroForm" action="" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" ><br>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido"><br>
+
+    <label for="correo">Correo Electrónico:</label>
+    <input type="email" id="correo" name="correo"><br>
+
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni"><br>
+
+    <button type="button" onclick="guardar()">Guardar</button>
+</form>
+
+<script src="app.js"></script>
+<!-- comprobar si el objeto se cambia -->
+<button type="button" onclick="mostrarPersona()">Mostrar Persona</button>
+</body>
+</html>
