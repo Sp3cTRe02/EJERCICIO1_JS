@@ -4,23 +4,89 @@
     <meta charset="UTF-8">
     <title>Datos Usuario</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 8px;
+    }
+
+    input {
+        padding: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+</style>
 <body>
-<h2>Usuario</h2>
-<form id="registroForm" action="" method="post">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" ><br>
+<div class="container">
+    <h1>Datos del Usuario</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido" name="apellido"><br>
+        <label for="primer-apellido">Primer Apellido:</label>
+        <input type="text" id="primer-apellido" name="primer-apellido" required>
 
-    <label for="correo">Correo Electrónico:</label>
-    <input type="email" id="correo" name="correo"><br>
+        <label for="segundo-apellido">Segundo Apellido:</label>
+        <input type="text" id="segundo-apellido" name="segundo-apellido" required>
 
-    <label for="dni">DNI:</label>
-    <input type="text" id="dni" name="dni"><br>
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" required>
 
-    <button type="button" onclick="guardar()">Guardar</button>
-</form>
+        <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+        <input type="text" id="fecha-nacimiento" name="fecha-nacimiento" required>
+
+        <div class="buttons">
+            <button type="button" onclick="guardar()">Guardar</button>
+            <button type="button" onclick="limpiar()">Limpiar</button>
+        </div>
+    </form>
+</div>
 
 <script src="app.js"></script>
 <!-- comprobar si el objeto se cambia -->
